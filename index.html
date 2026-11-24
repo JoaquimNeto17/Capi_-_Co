@@ -1246,6 +1246,20 @@ dialog.capi-menu::backdrop{background:#151d15c9;backdrop-filter:blur(6px)}
 .cs7-menu-arrow{display:inline-flex;flex:none;width:16px;height:16px;color:var(--cs7-amber);transition:translate .24s ease}
 .cs7-menu-arrow svg{width:100%;height:100%}
 .cs7-nav-link:hover .cs7-menu-arrow{translate:2px -2px}
+.cs7-contact{max-width:1400px;margin:0 auto;padding:0 0 clamp(42px,5vw,70px);display:grid;grid-template-columns:minmax(210px,.85fr) minmax(0,1.15fr);gap:clamp(28px,8vw,150px);align-items:start}
+.cs7-contact-title{margin:0 0 14px;font:italic 700 clamp(34px,4vw,56px)/1.06 Georgia,'Times New Roman',serif;letter-spacing:-.045em;color:var(--cs7-cream)}
+.cs7-contact-intro{margin:0;color:#e7dfca;font:400 15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.cs7-contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px;max-width:650px}
+.cs7-field{display:flex;flex-direction:column;min-width:0;gap:8px}
+.cs7-field--wide{grid-column:1/-1}
+.cs7-field label{font:600 10px/1.4 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#e6cd9b}
+.cs7-field input,.cs7-field textarea{width:100%;min-width:0;border:1px solid #fff1d655;border-radius:7px;background:#fff1d60c;color:var(--cs7-cream);padding:13px 15px;font:400 15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;outline:0;transition:border-color .2s ease,background-color .2s ease}
+.cs7-field input{min-height:48px}
+.cs7-field textarea{min-height:108px;resize:vertical}
+.cs7-field input::placeholder,.cs7-field textarea::placeholder{color:#e7dfcaa6}
+.cs7-field input:focus-visible,.cs7-field textarea:focus-visible{border-color:var(--cs7-amber);background:#fff1d616;outline:2px solid var(--cs7-amber);outline-offset:2px}
+.capi-epilogue .cs7-submit{grid-column:1/-1;justify-self:start;min-height:48px;margin-top:2px;padding:12px 25px;border:0;border-radius:100px;background:var(--cs7-amber);color:#281e17;font:700 14px/1.4 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;transition:background-color .2s ease,transform .2s ease}
+.capi-epilogue .cs7-submit:hover{background:var(--cs7-cream);transform:translateY(-2px)}
 .cs7-footer-bottom{max-width:1400px;margin:0 auto;border-top:1px solid #fff1d62c;padding:22px 0 8px;display:flex;justify-content:space-between;align-items:center;gap:22px}
 .cs7-footer-fine{font:500 10px/1.55 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#d5c9af;margin:0}
 .capi-epilogue .cs7-backtotop{display:inline-flex;align-items:center;justify-content:flex-end;gap:12px;min-height:44px;padding:9px 2px;text-decoration:none;color:#eee4ce;font:500 13px/1.5 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;white-space:nowrap}
@@ -1278,6 +1292,8 @@ dialog.capi-menu::backdrop{background:#151d15c9;backdrop-filter:blur(6px)}
  .cs7-stamp--5{--cs7-size:81px;bottom:8%;left:9px;--cs7-opacity:.06}
  .cs7-footer{padding-left:24px;padding-right:24px}
  .cs7-footer-inner{grid-template-columns:1fr;gap:35px;padding:33px 0 30px}
+ .cs7-contact{grid-template-columns:1fr;gap:23px;padding-bottom:38px}
+ .cs7-contact-form{max-width:none}
  .cs7-logo{width:min(220px,100%)}
  .cs7-brand-slogan{font-size:18px}
  .cs7-nav-title{margin-bottom:13px}
@@ -1292,6 +1308,7 @@ dialog.capi-menu::backdrop{background:#151d15c9;backdrop-filter:blur(6px)}
  .cs7-epigraph{max-width:245px;text-align:center}
  .cs7-footer{padding-left:20px;padding-right:20px}
  .cs7-footer-inner{gap:29px}
+ .cs7-contact-form{grid-template-columns:1fr;gap:16px}
  .cs7-footer-bottom{flex-wrap:wrap;gap:7px}
  .capi-epilogue .cs7-backtotop{margin-left:auto}
 }
@@ -1421,10 +1438,26 @@ dialog.capi-menu::backdrop{background:#151d15c9;backdrop-filter:blur(6px)}
           <a class="cs7-nav-link" href="#sabores">Produtos</a>
           <a class="cs7-nav-link" href="#beneficios">Benefícios</a>
           <a class="cs7-nav-link" href="#identidade">A marca</a>
+          <a class="cs7-nav-link" href="#contato">Contato</a>
           <button class="cs7-nav-link" type="button" id="cs7MenuButton" aria-controls="capiMenu" aria-haspopup="dialog">Cardápio <span class="cs7-menu-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5M8 5h11v11"/></svg></span></button>
         </nav>
       </div>
     </div>
+    <section class="cs7-contact" id="contato" aria-labelledby="cs7-contact-title">
+      <div>
+        <h3 class="cs7-contact-title" id="cs7-contact-title">Vamos conversar?</h3>
+        <p class="cs7-contact-intro">Deixe sua mensagem para a CAPI &amp; CO.</p>
+      </div>
+      <form class="cs7-contact-form" action="https://primeiro-plano.com/crm/capturar.php?k=a929908e504965cdb528b69b" method="post">
+        <div class="cs7-field"><label for="cs7-nome">Nome</label><input id="cs7-nome" type="text" name="nome" placeholder="Seu nome" autocomplete="name" required></div>
+        <div class="cs7-field"><label for="cs7-email">E-mail</label><input id="cs7-email" type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required></div>
+        <div class="cs7-field cs7-field--wide"><label for="cs7-telefone">WhatsApp</label><input id="cs7-telefone" type="tel" name="telefone" placeholder="WhatsApp" autocomplete="tel"></div>
+        <div class="cs7-field cs7-field--wide"><label for="cs7-mensagem">Mensagem</label><textarea id="cs7-mensagem" name="mensagem" placeholder="Como podemos ajudar?"></textarea></div>
+        <input type="hidden" name="_redirect" value="https://capico-gules.vercel.app/obrigado.html">
+        <input type="text" name="_hp" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="cs7-submit" type="submit">Quero saber mais</button>
+      </form>
+    </section>
     <div class="cs7-footer-bottom">
       <p class="cs7-footer-fine">CAPI &amp; CO. / O sabor tem seu lado CAPI.</p>
       <a class="cs7-backtotop cs7-go-top" href="#" aria-label="Voltar ao início da página"><span>Voltar ao início</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V4m-7 7 7-7 7 7"/></svg></a>
