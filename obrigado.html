@@ -18,21 +18,21 @@
     .logo{display:block;width:clamp(175px,21vw,245px);height:auto}
     .header-note,.eyebrow,.card-label,.footer{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
     .header-note{color:#e6cd9b;text-align:right}
-    .main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(48px,8vw,135px);padding-block:clamp(20px,5vh,70px)}
+    .main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(48px,8vw,135px);padding-block-start:clamp(18px,3vh,46px);padding-block-end:clamp(32px,7vh,84px)}
     .intro{max-width:480px}
     .eyebrow{margin:0 0 26px;color:var(--accent)}
     .eyebrow::before{content:"";display:inline-block;width:30px;height:1px;background:currentColor;vertical-align:middle;margin-right:12px}
     h1{margin:0;color:var(--cream);font:italic 700 clamp(48px,5.2vw,76px)/1.04 Georgia,'Times New Roman',serif;letter-spacing:-.055em;text-wrap:balance}
     .intro-rule{display:block;width:76px;height:2px;background:var(--accent);margin:35px 0 23px}
     .intro-text{margin:0;max-width:36ch;color:#e7dfca;font-size:clamp(15px,1.3vw,18px);line-height:1.6}
-    .card{position:relative;width:100%;max-width:550px;justify-self:end;padding:clamp(28px,4.5vw,61px);border-radius:12px;background:var(--paper);color:var(--ink);box-shadow:0 32px 85px #10190e55}
+    .card{position:relative;width:100%;max-width:490px;justify-self:end;padding:clamp(24px,3vw,42px);border-radius:12px;background:var(--paper);color:var(--ink);box-shadow:0 32px 85px #10190e55}
     .card::before{content:"";position:absolute;inset:11px;pointer-events:none;border:1px solid #34231920;border-radius:5px}
     .card-content{position:relative}
-    .card-label{display:block;color:#6b6e54;margin-bottom:clamp(35px,5vw,69px)}
-    .check{width:56px;height:56px;border-radius:50%;background:var(--green);display:grid;place-items:center;margin-bottom:27px;color:var(--cream)}
-    .check svg{width:28px;height:28px}
-    .card h2{font:italic 700 clamp(35px,3.5vw,54px)/1.05 Georgia,'Times New Roman',serif;letter-spacing:-.048em;margin:0 0 17px}
-    .card p{margin:0 0 33px;max-width:34ch;color:#60574a;line-height:1.6}
+    .card-label{display:block;color:#6b6e54;margin-bottom:clamp(18px,2.5vw,30px)}
+    .check{width:48px;height:48px;border-radius:50%;background:var(--green);display:grid;place-items:center;margin-bottom:18px;color:var(--cream)}
+    .check svg{width:25px;height:25px}
+    .card h2{font:italic 700 clamp(31px,2.7vw,42px)/1.07 Georgia,'Times New Roman',serif;letter-spacing:-.045em;margin:0 0 14px}
+    .card p{margin:0 0 24px;max-width:34ch;color:#60574a;line-height:1.55}
     .back{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:50px;padding:11px 13px 11px 21px;border-radius:100px;background:var(--accent);color:var(--ink);font-weight:700;text-decoration:none;transition:background-color .2s ease,transform .2s ease}
     .back:hover{background:#efae80;transform:translateY(-2px)}
     .back:focus-visible{outline:3px solid var(--green);outline-offset:4px}
@@ -42,7 +42,7 @@
     @media(max-height:740px){
       .header{padding-top:20px}
       .logo{width:190px}
-      .main{padding-block:15px}
+      .main{padding-block:15px 32px}
       h1{font-size:clamp(44px,5.5vw,74px)}
       .eyebrow{margin-bottom:16px}
       .intro-rule{margin:18px 0 13px}
@@ -56,11 +56,11 @@
     @media(max-width:1100px){
       .main{grid-template-columns:minmax(0,1fr);gap:0;align-content:center;padding-block:16px}
       .intro,.footer{display:none}
-      .card{max-width:560px;justify-self:center;padding:clamp(24px,5vw,42px)}
-      .card-label{margin-bottom:clamp(20px,4vh,32px)}
-      .check{margin-bottom:clamp(14px,3vh,22px)}
-      .card h2{font-size:clamp(32px,6vw,48px)}
-      .card p{margin-bottom:clamp(18px,3vh,26px)}
+      .card{max-width:490px;justify-self:center;padding:clamp(22px,4vw,34px)}
+      .card-label{margin-bottom:clamp(16px,3vh,24px)}
+      .check{margin-bottom:clamp(13px,2vh,18px)}
+      .card h2{font-size:clamp(30px,5vw,40px)}
+      .card p{margin-bottom:clamp(18px,3vh,22px)}
     }
     @media(max-width:480px){
       .header{padding-top:clamp(14px,3vh,26px)}
@@ -100,7 +100,7 @@
       </div>
       <section class="card" aria-labelledby="received-title">
         <div class="card-content">
-          <span class="card-label">Mensagem enviada / 01</span>
+          <span class="card-label">Mensagem enviada</span>
           <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>
           <h2 id="received-title">Recebemos sua mensagem.</h2>
           <p>Nossa equipe entrará em contato em breve.</p>
