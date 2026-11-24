@@ -19,10 +19,10 @@
     .header-note,.eyebrow,.card-label,.footer{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
     .header-note{color:#e6cd9b;text-align:right}
     .main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(48px,8vw,135px);padding-block:clamp(20px,5vh,70px)}
-    .intro{max-width:560px}
+    .intro{max-width:480px}
     .eyebrow{margin:0 0 26px;color:var(--accent)}
     .eyebrow::before{content:"";display:inline-block;width:30px;height:1px;background:currentColor;vertical-align:middle;margin-right:12px}
-    h1{margin:0;color:var(--cream);font:italic 700 clamp(54px,6.6vw,102px)/.99 Georgia,'Times New Roman',serif;letter-spacing:-.065em;text-wrap:balance}
+    h1{margin:0;color:var(--cream);font:italic 700 clamp(48px,5.2vw,76px)/1.04 Georgia,'Times New Roman',serif;letter-spacing:-.055em;text-wrap:balance}
     .intro-rule{display:block;width:76px;height:2px;background:var(--accent);margin:35px 0 23px}
     .intro-text{margin:0;max-width:36ch;color:#e7dfca;font-size:clamp(15px,1.3vw,18px);line-height:1.6}
     .card{position:relative;width:100%;max-width:550px;justify-self:end;padding:clamp(28px,4.5vw,61px);border-radius:12px;background:var(--paper);color:var(--ink);box-shadow:0 32px 85px #10190e55}
@@ -53,7 +53,7 @@
       .card p{margin-bottom:18px}
       .footer{padding-block:14px 18px}
     }
-    @media(max-width:800px){
+    @media(max-width:1100px){
       .main{grid-template-columns:minmax(0,1fr);gap:0;align-content:center;padding-block:16px}
       .intro,.footer{display:none}
       .card{max-width:560px;justify-self:center;padding:clamp(24px,5vw,42px)}
@@ -94,16 +94,16 @@
     <main class="main">
       <div class="intro">
         <p class="eyebrow">Tudo certo por aqui</p>
-        <h1>Uma boa conversa começa aqui.</h1>
+        <h1>Tudo certo.</h1>
         <span class="intro-rule" aria-hidden="true"></span>
-        <p class="intro-text">Sua mensagem chegou à CAPI &amp; CO. Obrigado por entrar em contato.</p>
+        <p class="intro-text">Obrigado por conversar com a CAPI &amp; CO.</p>
       </div>
       <section class="card" aria-labelledby="received-title">
         <div class="card-content">
           <span class="card-label">Mensagem enviada / 01</span>
           <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg></span>
-          <h2 id="received-title">Recebemos seus dados.</h2>
-          <p>Obrigado pelo interesse. Em breve entraremos em contato.</p>
+          <h2 id="received-title">Recebemos sua mensagem.</h2>
+          <p>Nossa equipe entrará em contato em breve.</p>
           <a class="back" href="/"><span>Voltar ao início</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg></a>
         </div>
       </section>
